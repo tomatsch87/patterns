@@ -4,7 +4,7 @@ An implementation of the `backtracking` and `greedy` algorithm patterns in Java 
 
 ## Benchmark
 
-It is easy to see, both by calculation and with eye-checking, that from n to n+1 the runtime of the backtracking algorithm approximately doubles.
+It is easy to see, both by calculation and by looking at the benchmark results, that from n to n+1 the runtime of the backtracking algorithm approximately doubles.
 This means that the runtime measured by the Rumetime-Test corresponds to the recurrence of `2n - 1` and also to the total number of permutations of a bit string of `2n`.
 
 We determine the constant c that is defined by our program using linear regression with the benchmark data (variable is called x instead of n):
