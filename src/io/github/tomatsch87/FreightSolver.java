@@ -98,7 +98,7 @@ public interface FreightSolver {
   }
 
   /**
-   * Performs a runtime test with a variaty of lengths for random weight and value samples
+   * Performs a runtime test with a variaty of lengths for the worst-case weight and value sample
    * Formats the results for the runtime test on the terminal
    */
   default void runtimeTest(){
