@@ -86,6 +86,30 @@ class Greedy {
 
   /**
    * Calculates the optimal freight distribution with a procedure from its implementing class
+   * @param selected Array that indicates selected freight with 1, everythin else is 0
+   * @param weights
+   * @param values
+   * @param capacity Maximum sum of all weights allowed for this freight less the selected weights
+   * @return The sum of all values from the selected distribution of weights
+   */
+  public int backpack(int[] selected, int[] weights, int[] values, int capacity){
+  //Local variable to store greedy result
+    int solve = 0;
+    while (optimalValue(weights, values, capacity, selected) != -1){
+      int res = optimalValue(weights, values, capacity, selected);
+      // set the index, where you found an optimalValue for to 1
+      selected[res] = 1;
+      // increase your solve variable by the new optimal value that you have found
+      solve += values[res];
+      // decrease your capacity by the weight of your founded value, for your upcoming search with the new less capacity
+      capacity -= weights[res];
+    }
+    // return your solve value as result
+    return solve;
+  }
+
+  /**
+   * Calculates the optimal freight distribution with a procedure from its implementing class
    * @param selected Array that indicates selected freight with 1, everything else is 0
    * @param weights
    * @param values
