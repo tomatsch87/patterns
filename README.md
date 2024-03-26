@@ -2,7 +2,7 @@
 
 An implementation of the `backtracking` and `greedy` algorithm patterns in Java using the backpack problem (with freights consisting of key-value-pairs) as an example.
 
-## Benchmarking backtracking
+## Benchmarking Backtracking
 
 It is easy to see, both by calculation and by looking at the benchmark results, that from n to n+1 the runtime of the backtracking algorithm approximately doubles.
 This means that the runtime measured by the Rumetime-Test corresponds to the recurrence of `2n - 1` and also to the total number of permutations of a bit string of `2n`.
